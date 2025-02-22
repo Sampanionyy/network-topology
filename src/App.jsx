@@ -1,11 +1,23 @@
-import NetworkTopology from './components/NetworkTopology'
+import { useState } from 'react';
+import Welcome from './components/Welcome';
+import NetworkTopology from './components/NetworkTopology';
 
-function App() {
+const App = () => {
+  const [start, setStart] = useState(false);
+
+  const handleStart = () => {
+    setStart(true);
+  };
+
   return (
-    <div>
-      <NetworkTopology />
+    <div className="flex justify-center items-center min-h-screen bg-red-100">
+      {!start ? (
+        <Welcome onStart={handleStart} />
+      ) : (
+        <NetworkTopology />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
