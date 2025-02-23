@@ -10,9 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/corben": "^5.1.1",
+    "@mui/material": "^6.4.5",
     "autoprefixer": "^10.4.20",
+    "d3": "^7.9.0",
     "formik": "^2.4.6",
     "gsap": "^3.12.7",
+    "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "yup": "^1.6.1"

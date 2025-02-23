@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Welcome from './components/Welcome';
 import NetworkTopology from './components/NetworkTopology';
+import "@fontsource/corben"; // Poids par défaut
+import "@fontsource/corben/700.css"; // Gras si nécessaire
 
 const App = () => {
   const [start, setStart] = useState(false);

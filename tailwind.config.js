@@ -8,6 +8,9 @@ module.exports = {
           300: '#FCA5A5',
         },
       },
+      fontFamily: {
+        corben: ["Corben", "cursive"], // Ajoute la police Corben
+      },
     },
   },
   plugins: [],
