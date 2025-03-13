@@ -25,7 +25,7 @@ const NetworkTopology = () => {
 
     return (
         <div className="flex flex-col items-center p-5 max-w-5xl mx-auto">
-            <h1 className="mb-5 text-2xl font-bold">Network Topology Simulator</h1>
+            <h1 className="mb-5 text-2xl font-bold">Simulateur de réseau</h1>
             <FormChoice 
                 config={config}
                 setConfig={setConfig}

@@ -12,18 +12,18 @@ const Information = ({
 }) => {
     return (
         <div className="w-full max-w-md p-4 bg-gray-100 rounded-lg mb-5 text-center">
-            <h3 className="text-lg font-bold mb-3 text-orange-400">Network Analysis</h3>
+            <h3 className="text-lg font-bold mb-3 text-orange-400">Analyse du réseau</h3>
 
             <div>
                 <div className='flex justify-center gap-2 items-center'>
                     <Info className='text-orange-400' size={15}/>
-                    <span className='text-orange-400 text-sm'>Click on nodes to calculate shortest path (select 2 nodes)</span>
+                    <span className='text-orange-400 text-sm'>Cliquer sur les noeuds pour calculer le chemin le plus court (2 noeuds)</span>
                 </div>
                 <div>
                     {selectedNodes.length === 2 && shortestPath && (
                         <>
                             <div>
-                                <span>Shortest path between nodes
+                                <span>Chemin le plus court entre
                                     <span className='ml-2'>
                                         <Chip label={selectedNodes[0]} color='error' />
                                     </span> and 
@@ -32,7 +32,7 @@ const Information = ({
                                     </span> :
                                 </span>
                                 <p className='bg-orange-200 p-2 mb-2 mt-2'>Distance: {shortestPath.distance}</p>
-                                <p className='bg-orange-200 p-2 mb-2'>Path: {shortestPath.path.join(' → ')}</p>
+                                <p className='bg-orange-200 p-2 mb-2'>Chemin: {shortestPath.path.join(' → ')}</p>
                             </div>
                             <button
                                 type="button"
@@ -40,12 +40,12 @@ const Information = ({
                                 onClick={calculateDiameter}
                                 disabled={nodes.length === 0}
                             >
-                                Calculate Network Diameter
+                                Calculer la diamètre du réseau
                             </button>
                         </>
                     )}
                     {networkDiameter !== null && (
-                        <p className='bg-orange-200 p-2'>Network Diameter: {networkDiameter}</p>
+                        <p className='bg-orange-200 p-2'>Diamètre du réseau: {networkDiameter}</p>
                     )}
 
                 </div>

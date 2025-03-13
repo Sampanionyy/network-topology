@@ -41,16 +41,16 @@ const FormChoice = (
         
         const newErrors = {};
         if (config.nodeCount < 3 || config.nodeCount > 20) {
-            newErrors.nodeCount = "Number of nodes must be between 3 and 20";
+            newErrors.nodeCount = "Nombre de noeuds doit être entre 3 et 20";
         }
         if (config.minLinks < 1) {
-            newErrors.minLinks = "Minimum links must be at least 1";
+            newErrors.minLinks = "Au moins 1 noeud";
         }
         if (config.maxLinks > 4) {
-            newErrors.maxLinks = "Maximum links cannot exceed 4";
+            newErrors.maxLinks = "Pas plus de 4 noeuds";
         }
         if (config.maxLinks < config.minLinks) {
-            newErrors.maxLinks = "Maximum links cannot be less than minimum links";
+            newErrors.maxLinks = "Le max doit être supérieur au min";
         }
 
         setErrors(newErrors);
@@ -62,7 +62,7 @@ const FormChoice = (
     };
 
      // Previous helper functions remain the same
-     const generateNodes = (count) => {
+    const generateNodes = (count) => {
         const padding = 50;
         const width = 800 - 2 * padding;
         const height = 600 - 2 * padding;
@@ -162,7 +162,7 @@ const FormChoice = (
         <form onSubmit={handleSubmit} className="w-full max-w-md mb-5 p-5 bg-gray-50 rounded-lg border border-gray-200">
             <div className="mb-4">
                 <label className="block mb-2 font-bold">
-                    Number of Nodes (3-20):
+                    Nombre de noeuds (3-20):
                     <input
                         type="number"
                         name="nodeCount"
@@ -178,7 +178,7 @@ const FormChoice = (
 
             <div className="mb-4">
                 <label className="block mb-2 font-bold">
-                    Minimum Links per Node:
+                    Nombre de liens minimum:
                     <input
                         type="number"
                         name="minLinks"
@@ -194,7 +194,7 @@ const FormChoice = (
 
             <div className="mb-4">
                 <label className="block mb-2 font-bold">
-                    Maximum Links per Node:
+                    Nombre de liens maximum:
                     <input
                         type="number"
                         name="maxLinks"
@@ -217,14 +217,14 @@ const FormChoice = (
                         onChange={handleConfigChange}
                         className="mr-2"
                     />
-                    Use Weighted Links
+                    Ajouter les poids des liens
                 </label>
             </div>
 
             {config.weightedLinks && (
                 <div className="mb-4">
                     <label className="block mb-2 font-bold">
-                        Minimum Weight:
+                        Poids minimum
                         <input
                             type="number"
                             name="min"
@@ -235,7 +235,7 @@ const FormChoice = (
                         />
                     </label>
                     <label className="block mb-2 font-bold">
-                        Maximum Weight:
+                        Poids maximum
                         <input
                             type="number"
                             name="max"
@@ -249,7 +249,7 @@ const FormChoice = (
             )}
 
             <button type="submit" className="w-full mb-2 py-2 px-4 bg-blue-600 text-white rounded-md text-base cursor-pointer hover:bg-blue-700">
-                Generate Network
+                Génerer le réseau
             </button>
         </form>
     )

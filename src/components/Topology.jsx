@@ -87,7 +87,7 @@ const Topology = ({
         return graph;
     };
 
-    // Calculate network diameter
+    // Calculer la diamètre du réseau
     const calculateDiameter = () => {
         const graph = createAdjacencyList();
         let maxDistance = 0;
@@ -100,7 +100,7 @@ const Topology = ({
                     maxDistance = distance;
                 }
             }
-        }
+        } 
         
         setNetworkDiameter(maxDistance);
     };
